@@ -20,14 +20,6 @@ public class HowGoodAreYouReally {
 
     public static boolean betterThanAverage(int[] classPoints, int yourPoints) {
         int average = (Arrays.stream(classPoints).sum() + yourPoints) / (classPoints.length + 1);
-        return yourPoints == average ? true : (yourPoints > average ? true : false);
+        return yourPoints > average ? true : false;
     }
-/* на сайте выдает ошибку:
-src/main/java/Kata.java:3: error: cannot find symbol
-        int average = (Arrays.stream(classPoints).sum() + yourPoints) / (classPoints.length + 1);
-                       ^
-  symbol:   variable Arrays
-  location: class Kata
-1 error
-*/
 }
