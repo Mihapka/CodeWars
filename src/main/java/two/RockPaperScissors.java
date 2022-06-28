@@ -11,17 +11,9 @@ public class RockPaperScissors {
         Answer a1 = answerFabric(answer3);
         Answer a2 = answerFabric(answer3);
 
-        System.out.println(a1.compareTo(a2));
-        switch (a1.compareTo(a2)){
-            case 0 :
-                System.out.println("Ничья");
-                break;
-            case 1 :
-                System.out.println("Player one win!");
-                break;
-            case -1 :
-                System.out.println("Player two win!");
-        }
+        System.out.println(a1.compareTo(a2) > 0 ? "Player 1 won!" : (a1.compareTo(a2) < 0 ? "Player 2 won!" : "Draw!"));
+//        return a1.equals(a2) ? "Draw!" : "Player " + ("scissorspaper paperrock rockscissors".contains(a1+a2)?1:2) + " won!";
+
     }
 
     static Answer answerFabric(String str) {
@@ -67,7 +59,6 @@ public class RockPaperScissors {
             else throw new IllegalArgumentException();
         }
     }
-
 }
 
 
